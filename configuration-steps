@@ -1,0 +1,17 @@
+#generate ssh keys to create encrypted connections between github and local ide environment
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub
+#copy key to github-->settings-->ssh
+
+#create a virtual environment to isolate python to a specific directory
+python3 -m venv ~/.vnev #make a virtual environment in specified directory
+source ~/.venv/bin/activate
+which python3
+
+#install ipython
+pip install --upgrade pip
+pip install ipython #install interactive shell
+pip install boto3
+
+ipython
+import boto3
